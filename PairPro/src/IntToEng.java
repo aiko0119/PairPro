@@ -12,8 +12,14 @@ public class IntToEng {
 	static String translateEng(int n) {
 		
 		String[] e= {"zero","one","two","three","four","five","six","seven","eight","nine","ten"};
+		String m = "";
+		for(int i=0; i<e.length; i++) {
+			if(n==i)
+			m=e[i];	
+				
+		}
 		
 		
-		return"";
+		return m;
 	}
 }

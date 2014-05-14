@@ -13,6 +13,7 @@ public class IntToEng {
 		
 		String[] e= {"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};
 		String[] e2 = {"","","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety","hundred"};
+		String[] e3 = {"","hundred","two hundreds","three hundreds","four hundreds","five hundreds"};
 		String m = "";
 		String l="";
 		String o="";
@@ -29,7 +30,7 @@ public class IntToEng {
 				}
 		}
 		
-		else{
+		if(n<100){
 			int j,k;
 			j = n/10;
 			k = n%10;
@@ -45,6 +46,14 @@ public class IntToEng {
 			m=o+l;
 		}
 		
+		if(n==200||n==300||n==400||n==500)	{
+			for(int i=0; i<e3.length; i++) {
+				if(n/100==i)
+					m=e3[i];	
+		}
+		
+		
+	}
 		return m;
 	}
 }

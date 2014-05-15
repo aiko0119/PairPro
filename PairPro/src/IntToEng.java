@@ -17,6 +17,7 @@ public class IntToEng {
 		String m = "";
 		String l="";
 		String o="";
+		String z="";
 		if(n<=10){
 			for(int i=0; i<e.length; i++) {
 				if(n==i)
@@ -54,6 +55,29 @@ public class IntToEng {
 		
 		
 	}
+		else {
+			int j,k,y,k2;
+			j = n/100;
+			k2 = n%100;
+			k = k2/10;
+			y = k2%10;
+			
+			for(int i=0; i<e.length; i++) {
+				if(y==i)
+					l=e[i];	
+				}
+			for(int i=0; i<e2.length; i++) {
+				if(k==i)
+					o=e2[i];	
+				}
+			for(int i=0; i<e3.length; i++) {
+				if(j==i)
+					z=e3[i];
+					
+			}
+			m=z+o+l;
+			
+		}
 		return m;
 	}
 }
